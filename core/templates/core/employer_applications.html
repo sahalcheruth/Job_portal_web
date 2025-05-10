@@ -1,0 +1,29 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="mb-4 text-center">Applications for Your Posted Jobs</h2>
+
+    {% if applications %}
+        <div class="row">
+            {% for app in applications %}
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ app.job.title }}</h5>
+                            <p class="card-text"><strong>Applicant:</strong> {{ app.applicant.username }}</p>
+                            <p class="card-text"><strong>Cover Letter:</strong><br>{{ app.cover_letter }}</p>
+                            <p class="card-text">
+                                <strong>Resume:</strong> 
+                                <a href="{{ app.resume.url }}" class="btn btn-sm btn-outline-primary ms-2">Download</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p class="text-center text-muted">No applications yet.</p>
+    {% endif %}
+</div>
+{% endblock %}
