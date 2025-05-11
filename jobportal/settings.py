@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-76@sxlr(79u+i9y14&5_to%*^*d$j)mt$jt!jzjq%8^4%l_&yq'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -138,7 +138,7 @@ STATIC_URL = '/static/'
 # EMAIL_USE_TLS = True
 # EMAIL_USE_SSL=False
 # EMAIL_HOST_USER = 'noreplaymail933@gmail.com'           # replace with your Gmail ID
-# EMAIL_HOST_PASSWORD = 'qhiqayhekscvuvui'  # paste the 16-character app password
+# EMAIL_HOST_PASSWORD = ''  # paste the 16-character app password
 # DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 
@@ -147,7 +147,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'noreplaymail933@gmail.com'  # Your Gmail
-EMAIL_HOST_PASSWORD = 'qhiqayhekscvuvui'       # 16-char Gmail App Password
+EMAIL_HOST_PASSWORD = ''       # 16-char Gmail App Password
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 LOGIN_URL = '/login/'
